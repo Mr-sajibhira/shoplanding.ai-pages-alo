@@ -1,0 +1,261 @@
+<style>
+.id_{{ section.id }}{
+  padding:100px 0px;
+  background-color:#232323;
+}
+
+.id_{{ section.id }} .container{
+  max-width:1000px;
+  width:100%;
+  margin:0px auto;
+}
+
+  
+.id_{{ section.id }} .title_box{
+  background-color:#1f1f1f;
+  width:100%;
+  padding:40px 60px;
+   border-radius: 4px;
+}
+.id_{{ section.id }} .title_box h2{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+}
+
+  
+.id_{{ section.id }} .row{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-20px;
+}
+  
+.id_{{ section.id }} .row .col{
+   box-sizing: border-box;
+   max-width:50%;
+   width:100%;
+   padding:20px;
+  
+} 
+
+.id_{{ section.id }} .product_box h2{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0px 0px 5px 0px;
+   height:52px;
+} 
+
+ .id_{{ section.id }} .product_box h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #616161;
+    margin: 0px 0px 10px 0px;
+} 
+.id_{{ section.id }} .product_box img{
+    aspect-ratio: 3/4;
+    object-fit: cover;
+  max-width:100%;
+  display:block;
+  margin:0px auto 15px auto;
+  }
+ .id_{{ section.id }} .product_box h4{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0px 0px 10px 0px;
+}
+   .id_{{ section.id }} .product_box p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #ffffff;
+    margin: 0px 0px 16px 0px;
+} 
+
+.id_{{ section.id }} .btn {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    margin-bottom: 0px;
+    padding: 18px 50px;
+    transition-duration: .5s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+  
+  @media(max-width:767px){
+    
+.id_{{ section.id }}{
+  padding:80px 20px;
+}
+
+.id_{{ section.id }} .title_box{
+  padding:30px 20px;
+}
+.id_{{ section.id }} .title_box h2{
+    font-size: 30px;
+}
+
+  
+.id_{{ section.id }} .row{
+  margin:0px;
+  gap:60px;
+}
+  
+.id_{{ section.id }} .row .col{
+   max-width:100%;
+   padding:0px;
+  
+} 
+
+.id_{{ section.id }} .product_box h2{
+   height:auto;
+} 
+
+
+
+.id_{{ section.id }} .btn {
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 0px;
+    padding: 12px 35px;
+}
+
+
+    
+    
+  }
+</style>
+
+
+
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+
+    <div class="title_box">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="row">
+              {% for block in section.blocks %}
+        {%  case block.type%}
+          {% when "product" %}
+           <div class="col">
+             <div class="product_box">
+               {% if block.settings.img != blank %}
+                 <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" width="100%" height="100%">
+               {% endif %}
+               <h2>{{ block.settings.title }}</h2>
+               <h3>| {{ block.settings.color }}</h3>
+               <h4>{{ block.settings.price }}</h4>
+               <p>{{ block.settings.shipping }}</p>
+
+               
+                {% if block.settings.btn_url != blank %}
+                  <a class="btn" href="{{ block.settings.btn_url }}">{{ block.settings.btn_text }}</a>
+                   {% endif %}
+              
+             </div>
+            </div>
+          {% endcase %}
+      {% endfor %}
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo Product Section",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Wellness Made Easy"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name":"Product",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select image",
+            "id": "img"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"ACCOLADE STRAIGHT LEG SWEATPANT"
+          },
+          {
+            "type": "text",
+            "label": "Color",
+            "id": "color",
+            "default":"Espresso"
+          },
+          {
+            "type": "text",
+            "label": "Price",
+            "id": "price",
+            "default":"$118"
+          },
+          {
+            "type": "text",
+            "label": "Shipping",
+            "id": "shipping",
+            "default":"Free Shipping + Free Returns"
+          },
+       {
+        "type": "text",
+        "label": "Button Text",
+        "id": "btn_text",
+        "default":"Get Alo"
+      },
+      {
+        "type": "url",
+        "label": "Button Url",
+        "id": "btn_url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+      "name": "Alo Product Section"
+      }
+    ]
+  }
+{% endschema %}

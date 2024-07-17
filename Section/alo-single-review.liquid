@@ -1,0 +1,146 @@
+<style>
+.id_{{ section.id }}{
+  padding:150px 0px 100px;
+  background-color:#151515;
+}
+.id_{{ section.id }} .container{
+  max-width:500px;
+  width:100%;
+  margin:0px auto;
+}
+.id_{{ section.id }} .container .box img{
+    aspect-ratio: 500/700;
+    object-fit: cover;
+    max-width:100%;
+   margin: 0px auto 16px auto;
+}  
+
+.id_{{ section.id }} .box svg{
+    width: 100%;
+    height:28px;
+    margin: 0px auto 16px auto;
+}
+  
+.id_{{ section.id }} h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 16px 0px;
+}
+.id_{{ section.id }} h3 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #dcdcdc;
+    text-align: right;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+}
+   @media(max-width:767px){
+
+     
+.id_{{ section.id }}{
+  padding:80px 20px 50px;
+}
+     
+.id_{{ section.id }} h2{
+    font-size: 30px;
+    margin: 0px 0px 10px 0px;
+}
+.id_{{ section.id }} h3 {
+    font-size: 18px;
+}
+.id_{{ section.id }} .container .box img{
+   margin: 0px auto 10px auto;
+}  
+
+.id_{{ section.id }} .box svg{
+    height:24px;
+    margin: 0px auto 10px auto;
+}     
+     
+   }
+</style>
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+    <div class="box">
+      {% if section.settings.img != blank %}
+           <img src="{{ section.settings.img | image_url }}" alt="{{ section.settings.img.alt }}" width="100%" height="100%">
+       {% endif %}
+
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="11px" viewBox="0 0 75 11" version="1.1">
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Storefront-Wireframe-Copy" transform="translate(-665.000000, -2145.000000)" fill="#FFB400">
+            <g id="Group" transform="translate(665.000000, 2145.000000)">
+                <polygon id="Star" points="6 9 2.47328849 10.854102 3.14683045 6.92705098 0.293660902 4.14589803 4.23664424 3.57294902 6 0 7.76335576 3.57294902 11.7063391 4.14589803 8.85316955 6.92705098 9.52671151 10.854102"/>
+                <polygon id="Star-Copy" points="21.75 9 18.2232885 10.854102 18.8968305 6.92705098 16.0436609 4.14589803 19.9866442 3.57294902 21.75 0 23.5133558 3.57294902 27.4563391 4.14589803 24.6031695 6.92705098 25.2767115 10.854102"/>
+                <polygon id="Star-Copy-2" points="37.5 9 33.9732885 10.854102 34.6468305 6.92705098 31.7936609 4.14589803 35.7366442 3.57294902 37.5 0 39.2633558 3.57294902 43.2063391 4.14589803 40.3531695 6.92705098 41.0267115 10.854102"/>
+                <polygon id="Star-Copy-3" points="53.25 9 49.7232885 10.854102 50.3968305 6.92705098 47.5436609 4.14589803 51.4866442 3.57294902 53.25 0 55.0133558 3.57294902 58.9563391 4.14589803 56.1031695 6.92705098 56.7767115 10.854102"/>
+                <polygon id="Star-Copy-4" points="69 9 65.4732885 10.854102 66.1468305 6.92705098 63.2936609 4.14589803 67.2366442 3.57294902 69 0 70.7633558 3.57294902 74.7063391 4.14589803 71.8531695 6.92705098 72.5267115 10.854102"/>
+            </g>
+        </g>
+    </g>
+<script xmlns=""/></svg>
+
+      <h2>“{{ section.settings.title }}"</h2>
+      <h3>-{{ section.settings.name }} | {{ section.settings.country }}</h3>
+
+
+
+  
+    </div>
+    
+  </div>
+
+
+  
+</section>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo Single Review",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Select Image",
+        "id": "img"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"I live in these every day!"
+      },
+      {
+        "type": "text",
+        "label": "Name",
+        "id": "name",
+        "default":"Terri T."
+      },
+      {
+        "type": "text",
+        "label": "Country",
+        "id": "country",
+        "default":"Nampa, ID"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo Single Review"
+      }
+    ]
+  }
+{% endschema %}

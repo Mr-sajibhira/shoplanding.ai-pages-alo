@@ -1,0 +1,62 @@
+
+<style>
+.id_{{ section.id }}{
+  padding:70px 0px;
+  background-color:#ffffff;
+}
+
+.id_{{ section.id }} .container{
+    max-width:960px;
+    width:100%;
+   margin:0px auto;
+  }
+  
+.id_{{ section.id }} .des{
+    font-size: 32px;
+    font-weight:700;
+    line-height:140%;
+    color:#000000;
+   text-align: center;
+}  
+  @media(max-width:767px){
+    
+.id_{{ section.id }}{
+  padding:50px 20px;
+}
+    
+.id_{{ section.id }} .des{
+ font-size: 24px;
+} 
+    
+  }
+</style>
+
+
+
+
+<section class="id_{{ section.id }}">
+   <div class="container">
+    <div class="des">{{ section.settings.text }}</div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Alo Text",
+    "settings": [
+      {
+        "type": "richtext",
+        "label": "Text",
+        "id": "text",
+        "default":"<p>Join us throughout January as we explore how three key pillars of wellness—recovery, movement, and mindfulness—can easily fold into our everyday routines.</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo Text"
+      }
+    ]
+  }
+{% endschema %}

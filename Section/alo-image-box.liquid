@@ -1,0 +1,143 @@
+<style>
+ .id_{{ section.id }}{
+   padding:80px 0px;
+  background-color:#151515;
+ }
+.id_{{ section.id }} .container{
+    max-width:1200px;
+    width:100%;
+    margin:0px auto;
+}
+.id_{{ section.id }} .container .row{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-20px;
+}
+.id_{{ section.id }} .container .row .col{
+  max-width:25%;
+  width:100%;
+  box-sizing: border-box;
+  padding:20px;
+}
+.id_{{ section.id }} .title{
+    font-size: 36px;
+    line-height: 100%;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+   text-align: center;
+}
+  
+.id_{{ section.id }} .image_box{
+  
+}
+.id_{{ section.id }} .image_box img{
+  max-width:100%;
+  display:block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+   border-radius:5px;
+  margin:0px auto 20px auto;
+}
+
+
+
+
+@media(max-width:768px){
+  
+ .id_{{ section.id }}{
+   padding:20px 20px 50px;
+ }
+  
+.id_{{ section.id }} .container .row{
+    margin:-10px;
+  }
+  
+.id_{{ section.id }} .container .row .col{
+  max-width:50%;
+  padding:10px;
+}
+
+.id_{{ section.id }} .title{
+    font-size: 24px;
+}
+  
+.id_{{ section.id }} .image_box img{
+
+  margin:0px auto 15px auto;
+}
+
+  
+}
+  
+</style>
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        {%  case block.type%}
+          {% when "image_box" %}
+           <div class="col">
+             <div class="image_box">
+               {% if block.settings.img != blank %}
+                 <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" width="100%" height="100%">
+               {% endif %}
+               <h3 class="title">{{ block.settings.title }}</h3>
+              
+             </div>
+            </div>
+          {% endcase %}
+      {% endfor %}
+    </div>
+    
+    
+  </div>
+</section>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo Image Box",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image_box",
+        "name":"Image box",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select Image",
+            "id": "img"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Movement"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo Image Box",
+        "blocks": [
+          {
+            "type": "image_box",
+          },
+          {
+            "type": "image_box",
+          },
+          {
+            "type": "image_box",
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

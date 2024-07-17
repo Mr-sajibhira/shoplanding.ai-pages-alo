@@ -1,0 +1,145 @@
+
+<style>
+.id_{{ section.id }}{
+  padding:{{section.settings.padding}};
+  background-color:#151515;
+}
+
+.id_{{ section.id }} .container{
+    max-width:720px;
+    width:100%;
+   margin:0px auto;
+  }
+
+
+
+.id_{{ section.id }} h2{
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 110%;
+   color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin: 0px 0px 16px 0px;
+}
+  
+.id_{{ section.id }} .des{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin: 0px 0 0px 0px;
+
+}  
+
+.id_{{ section.id }} .btn {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    margin-bottom: 0px;
+    padding: 18px 50px;
+    transition-duration: .5s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+  
+  @media(max-width:767px){
+    
+.id_{{ section.id }}{
+  padding:80px 20px;
+}
+
+.id_{{ section.id }} h2{
+  font-size: 50px;
+}
+    
+.id_{{ section.id }} .des{
+ font-size: 18px;
+} 
+
+.id_{{ section.id }} .btn {
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 0px;
+    padding: 12px 35px;
+}
+
+
+    
+    
+  }
+</style>
+
+
+
+
+<section class="id_{{ section.id }}">
+   <div class="container">
+       <h2>{{ section.settings.title }}</h2>
+       <div class="des">{{ section.settings.text }}</div>
+       {% if section.settings.btn_url != blank %}
+         <style>
+           .id_{{ section.id }} .des{
+             margin:0px 0px 16px 0px;
+           }
+         </style>
+        <a class="btn" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+       {% endif %}
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+   "name": "Alo Rich Text",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Section Padding",
+        "id": "padding",
+        "default":"200px 0px"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Embrace the Journey to Wellness"
+      },
+      {
+        "type": "textarea",
+        "label": "Text",
+        "id": "text",
+        "default":"Discover the perfect blend of style, comfort, and functionality with Alo Yoga's wellness collection. Our premium yoga wear and accessories are designed to support your journey towards a balanced and healthy lifestyle."
+      },
+      {
+        "type": "text",
+        "label": "Button Text",
+        "id": "btn_text",
+        "default":"Get Alo"
+      },
+      {
+        "type": "url",
+        "label": "Button Url",
+        "id": "btn_url"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo Rich Text"
+      }
+    ]
+  }
+{% endschema %}

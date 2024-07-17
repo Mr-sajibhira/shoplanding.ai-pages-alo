@@ -1,0 +1,107 @@
+<style>
+.id_{{ section.id }}{
+  padding:300px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url({{section.settings.img | image_url}});
+    position: relative;
+     background-attachment: fixed;
+}
+.id_{{ section.id }}::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 40%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+
+    
+.id_{{ section.id }} .container{
+  max-width:500px;
+  width:100%;
+  margin:0px auto;
+    position: relative;
+     z-index: 1;
+}
+
+  
+.id_{{ section.id }} h2{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+}
+   @media(max-width:767px){
+     
+.id_{{ section.id }}{
+  padding:180px 20px;
+}
+     
+.id_{{ section.id }} h2{
+    font-size: 30px;
+   text-align: center;
+}
+     
+     
+   }
+</style>
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+    <div class="box">
+      <h2>{{ section.settings.title }}</h2>
+        <h2>{{ section.settings.review }}</h2>
+  
+    </div>
+    
+  </div>
+
+
+  
+</section>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo BG Text Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Select Image",
+        "id": "img"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Over 75,000"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "review",
+        "default":"5-Star Reviews"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo BG Text Image"
+      }
+    ]
+  }
+{% endschema %}

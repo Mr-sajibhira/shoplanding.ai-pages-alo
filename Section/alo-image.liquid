@@ -1,0 +1,52 @@
+
+
+<style>
+
+.id_{{ section.id }}{
+  background-image:url({{section.settings.img | image_url}});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:block;
+  height:100vh;
+  width:100%;
+ max-width:100%;
+}
+    
+@media (max-width: 768px) {
+.id_{{ section.id }}{
+   height: 50vh;
+   background-position: left;
+  padding: 0px;
+}
+
+}
+</style>
+
+<section class="id_{{ section.id }}">
+
+</section>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo Image",
+    "settings": [
+       {
+        "type": "image_picker",
+        "label": "Select Image",
+        "id": "img"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo Image"
+      }
+    ]
+  }
+{% endschema %}

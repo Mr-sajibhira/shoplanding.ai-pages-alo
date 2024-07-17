@@ -1,0 +1,129 @@
+<style>
+.id_{{ section.id }}{
+  padding:250px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url({{section.settings.img | image_url}});
+    position: relative;
+}
+.id_{{ section.id }}::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 40%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+
+    
+.id_{{ section.id }} .container{
+  max-width:800px;
+  width:100%;
+  margin:0px auto;
+    position: relative;
+     z-index: 1;
+}
+
+  
+.id_{{ section.id }} h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+}
+
+.id_{{ section.id }} p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin: 16px 0px 0px 0px;
+    max-width:500px;
+}
+
+
+    
+   @media(max-width:767px){
+     
+.id_{{ section.id }}{
+  padding:100px 40px;
+}
+     
+.id_{{ section.id }} h2{
+    font-size: 30px;
+}
+  
+.id_{{ section.id }} p{
+    font-size: 18px;
+}     
+     
+   }
+</style>
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+    <div class="box">
+      <h2>{{ section.settings.title }}</h2>
+       <h2>{{ section.settings.title2 }}</h2>
+      <p>{{ section.settings.des }}</p>
+  
+    </div>
+    
+  </div>
+
+
+  
+</section>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Alo BG Rich Text Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Select Image",
+        "id": "img"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Sustainable and Ethical –"
+      },
+      {
+        "type": "text",
+        "label": "Title 2",
+        "id": "title2",
+        "default":"A Commitment to the Planet"
+      },
+      {
+        "type": "textarea",
+        "label": "Description",
+        "id": "des",
+        "default":"We're committed to sustainability and ethical practices. Feel good about what you wear, knowing it's made with respect for the planet."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Alo BG Rich Text Image"
+      }
+    ]
+  }
+{% endschema %}

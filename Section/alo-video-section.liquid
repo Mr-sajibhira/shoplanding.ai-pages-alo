@@ -1,0 +1,172 @@
+
+ <style> 
+ .id_{{ section.id }}{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #333333;
+}
+ .id_{{ section.id }} .container{
+    max-width: 1200px;
+    width:100%;
+    margin: 0 auto;
+}
+ .id_{{ section.id }} .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:-30px;
+   flex-direction:{{section.settings.flex-direction}};
+}
+
+ .id_{{ section.id }} .col_text{
+     max-width: 45%;
+     width:100%;
+     padding: 30px;
+     box-sizing: border-box;
+}
+  .id_{{ section.id }} .col_text h2 {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 100%;
+    margin:0px 0px 16px;
+}
+  .id_{{ section.id }} .col_text h4 {
+  color: #ffffff;
+    font-size: 28px;
+    line-height:36px;
+    font-weight: 500;
+    margin:0px;
+}
+ .id_{{ section.id }} .col_video {
+     max-width: 55%;
+     width:100%;
+    padding: 30px;
+   box-sizing: border-box;
+}
+  .id_{{ section.id }} .col_video video{
+    display: block;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    max-width:90%;
+    width:100%;
+    margin:0px auto;
+    border-radius: 20px;
+    box-shadow: 12px 15px 0px 0px #191919;
+}
+   
+@media(max-width: 768px) {
+  
+    .id_{{ section.id }}{ padding: 80px 20px;}
+   .id_{{ section.id }} .row{ margin:-20px;}
+    .id_{{ section.id }} .col_text, .id_{{ section.id }} .col_video{ max-width:100%; padding:20px;}
+    .id_{{ section.id }} .col_text h2 {font-size: 60px;}
+    .id_{{ section.id }} .col_text h4 {font-size: 22px;}
+    .id_{{ section.id }} .col_video video{ max-width:100%; box-shadow: 10px 10px 0px 0px #191919; }
+  }
+    </style>
+
+    <section class="id_{{ section.id }}">
+      <div class="container">
+        <div class="row">
+            <div class="col_text">
+              <h2>{{ section.settings.title }}</h2>
+              <h4>{{ section.settings.text }}</h4>
+            </div>
+            <div class="col_video">
+              <div class="video">
+                      
+              
+              {%liquid  
+             assign video =  section.settings.video
+             assign enable_video_looping =  section.settings.enable_video_looping
+            assign video_id = section.settings.video.id | default: section.settings.video_url.id
+          %}
+              
+                  {%- if video  != null -%}
+                {%- liquid
+                  assign loop = ''
+                  if enable_video_looping
+                    assign loop = '&loop=1&playlist=' | append: video_id
+                  endif
+                -%}
+                 {{
+                  section.settings.video
+                  | video_tag:
+                    image_size: '1100x',
+                    autoplay: true,
+                    loop: enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {% endif %}
+            </div>
+        </div>
+          </div>
+      </div>
+    </section>
+
+
+
+{% schema %}
+  {
+    "name": "Alo Video Section",
+    "settings": [
+      {
+        "type": "select",
+        "label": "Flex Direction",
+        "id": "flex-direction",
+        "default":"row",
+        "options": [
+          {
+            "label": "row",
+            "value": "row"
+          },
+          {
+            "label": "row-reverse",
+            "value": "row-reverse"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Nourish Your Spirit"
+      },
+      {
+        "type": "textarea",
+        "label": "Description",
+        "id": "text",
+        "default":"Discover Balance with Alo Yoga Wellness "
+      },
+       {
+            "type": "video",
+            "id": "video",
+            "label": "t:sections.video.settings.video.label"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_video_looping",
+            "label": "t:sections.video.settings.enable_video_looping.label",
+            "default": false
+          }
+    ],
+    "presets": [
+      {
+         "name": "Alo Video Section"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+
+
+
+
+
+
+
+

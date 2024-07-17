@@ -1,0 +1,328 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+    "layout": "theme.landing",
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "zegsu-header-bar": {
+        "type": "apps",
+        "disabled": true,
+        "settings": {
+          "include_margins": true
+        }
+      },
+      "alo_header_hJpDHc": {
+        "type": "alo-header",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/472241699419063450-6e2c926f-601b-4486-92da-a2524760c380.png",
+          "imglink": "",
+          "img_width": 100,
+          "img_alignment": "0px auto 0px"
+        }
+      },
+      "alo_video_section_AdT3yH": {
+        "type": "alo-video-section",
+        "settings": {
+          "flex-direction": "row-reverse",
+          "title": "Nourish Your Spirit",
+          "text": "Discover Balance with Alo Yoga Wellness",
+          "video": "shopify:\/\/files\/videos\/Quiz Video.mp4",
+          "enable_video_looping": true
+        }
+      },
+      "alo_text_JJw4DB": {
+        "type": "alo-text",
+        "settings": {
+          "text": "<p>Join us throughout January as we explore how three key pillars of wellness—<em>recovery, movement, and mindfulness<\/em>—can easily fold into our everyday routines.<\/p>"
+        }
+      },
+      "alo_rich_text_8rVG9m": {
+        "type": "alo-rich-text",
+        "settings": {
+          "padding": "200px 0px",
+          "title": "Embrace the Journey to Wellness",
+          "text": "Discover the perfect blend of style, comfort, and functionality with Alo Yoga's wellness collection. Our premium yoga wear and accessories are designed to support your journey towards a balanced and healthy lifestyle.",
+          "btn_text": "Get Alo",
+          "btn_url": ""
+        }
+      },
+      "alo_image_U6rApH": {
+        "type": "alo-image",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_59388153326c42308f9aec8717d5665e.webp"
+        }
+      },
+      "alo_rich_text_bAA7eH": {
+        "type": "alo-rich-text",
+        "settings": {
+          "padding": "200px 0px 0px 0px",
+          "title": "Beyond the Mat: Wellness for Mind and Body",
+          "text": "Alo Yoga Wellness isn't just about clothing; it's a lifestyle. Explore our wellness blog for tips on yoga, mindfulness, and healthy living. Join our community events to connect with fellow wellness enthusiasts.",
+          "btn_text": "Get Alo",
+          "btn_url": "#"
+        }
+      },
+      "alo_image_box_8zYPhU": {
+        "type": "alo-image-box",
+        "blocks": {
+          "image_box_YBJrGq": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_add6c6c2bc9c44058797d18863b97200.webp",
+              "title": "Movement."
+            }
+          },
+          "image_box_iPNcxH": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_b8bd1f915a774dd682b0128a703d586a.webp",
+              "title": "Rest & Recovery"
+            }
+          },
+          "image_box_UEKTkW": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_56e6b8e1ac5c4acf97b4108153dafd49.webp",
+              "title": "Home Practice"
+            }
+          },
+          "image_box_YGJGDj": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_aa25a6b797b3453da5360093222b6583.webp",
+              "title": "Wellness"
+            }
+          }
+        },
+        "block_order": [
+          "image_box_YBJrGq",
+          "image_box_iPNcxH",
+          "image_box_UEKTkW",
+          "image_box_YGJGDj"
+        ],
+        "settings": {
+        }
+      },
+      "alo_video_section_GEyUPi": {
+        "type": "alo-video-section",
+        "settings": {
+          "flex-direction": "row",
+          "title": "For Every Body",
+          "text": "Experience the difference with our high-quality, eco-friendly yoga apparel. From leggings to sports bras, our range caters to all body types, ensuring comfort and confidence in every pose.",
+          "video": "shopify:\/\/files\/videos\/9aa5afcb3c78412c96854d1c7f9b5d4b.mp4",
+          "enable_video_looping": false
+        }
+      },
+      "alo_lite_image_box_yK8TFh": {
+        "type": "alo-lite-image-box",
+        "blocks": {
+          "image_box_bLcTXq": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_9dd176d9e8b44e30bd7ad9e0e1c06ed8.webp",
+              "title": "RESTORATIVE RESET",
+              "text": "<p>Restorative Reset provides the perfect balance to busy lifestyles and intense workouts. <\/p>"
+            }
+          },
+          "image_box_Q3pyqX": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_0f2b345975344bdb9d06dc5c5cf10e8b.webp",
+              "title": "TOTAL FIT",
+              "text": "<p>This fast style of training alternates between high-energy intervals and lower intensity recovery to elevate your heart rate for that maximum burn long after class ends.<\/p>"
+            }
+          },
+          "image_box_BxE6Eh": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_298dcd6d43314b3284e610c8c5caa3aa.webp",
+              "title": "7 DAYS TO MINDFULNESS",
+              "text": "<p>Bring mindfulness into your daily life and shift your perspective with this 7-day meditation journey. You will explore how meditation can realign the way you think, feel, and act.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "image_box_bLcTXq",
+          "image_box_Q3pyqX",
+          "image_box_BxE6Eh"
+        ],
+        "settings": {
+          "img": "shopify:\/\/shop_images\/svgexport-1.png",
+          "title": "READY WHEN YOU ARE",
+          "des": "Kick off 2024 with 30 free days of Alo Moves. Access fitness, mindfulness & self-care classes everywhere you go."
+        }
+      },
+      "alo_single_review_beapCj": {
+        "type": "alo-single-review",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_4388a35892224252a2dca44d06990bdd.webp",
+          "title": "I'll never wear another sports bra ever!",
+          "name": "Jarica  D.",
+          "country": "Lansdowne PA"
+        }
+      },
+      "alo_bg_text_image_fyFzWk": {
+        "type": "alo-bg-text-image",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_ddd564817ced4df49c2d3ac5044753e5_1.webp",
+          "title": "Over 75,000",
+          "review": "5-Star Reviews"
+        }
+      },
+      "alo_single_review_zjWWXw": {
+        "type": "alo-single-review",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_de65552635524540b3f9c4e28829187f.webp",
+          "title": "I live in these every day!",
+          "name": "Terri T.",
+          "country": "Nampa, ID"
+        }
+      },
+      "alo_bg_rich_text_image_jRMxjU": {
+        "type": "alo-bg-rich-text-image",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_d2dbb976bb4b4e38ae541edc13928918.webp",
+          "title": "Sustainable and Ethical –",
+          "title2": "A Commitment to the Planet",
+          "des": "We're committed to sustainability and ethical practices. Feel good about what you wear, knowing it's made with respect for the planet."
+        }
+      },
+      "alo_image_box_6_col_QKaDhc": {
+        "type": "alo-image-box-6-col",
+        "blocks": {
+          "image_box_TLKBMz": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/W1445R_03299_b1_s1_a1_1_m76_2000x2000_7174f465-6182-434b-bbfd-bf807d177af9.webp",
+              "title": "YOGA"
+            }
+          },
+          "image_box_q99jAe": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/U5012RG_04064_b1_s1_a1_1_m54_2000x2000_25762b68-d933-42b9-bbef-5955164b838a.jpg",
+              "title": "LOUNGE"
+            }
+          },
+          "image_box_qRPFB6": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_d2dbb976bb4b4e38ae541edc13928918.webp",
+              "title": "TENNIS"
+            }
+          },
+          "image_box_taAT64": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_ddd564817ced4df49c2d3ac5044753e5_1.webp",
+              "title": "PILATES"
+            }
+          },
+          "image_box_yPz7fW": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_0f2b345975344bdb9d06dc5c5cf10e8b.webp",
+              "title": "TRAIN"
+            }
+          },
+          "image_box_RLzQcB": {
+            "type": "image_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/assets_aa96744e7fe74e2a90d22918299c1f1d_9dd176d9e8b44e30bd7ad9e0e1c06ed8.webp",
+              "title": "RUN"
+            }
+          }
+        },
+        "block_order": [
+          "image_box_TLKBMz",
+          "image_box_q99jAe",
+          "image_box_qRPFB6",
+          "image_box_taAT64",
+          "image_box_yPz7fW",
+          "image_box_RLzQcB"
+        ],
+        "settings": {
+        }
+      },
+      "alo_product_section_wNQQRj": {
+        "type": "alo-product-section",
+        "blocks": {
+          "product_jkY7nP": {
+            "type": "product",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/W1445R_03299_b1_s1_a1_1_m76_2000x2000_7174f465-6182-434b-bbfd-bf807d177af9.webp",
+              "title": "RIBBED SEA COAST CROPPED SHORT SLEEVE TEE",
+              "color": "Ivory",
+              "price": "$48",
+              "shipping": "Free Shipping + Free Returns",
+              "btn_text": "Get Alo",
+              "btn_url": "#"
+            }
+          },
+          "product_yaXp37": {
+            "type": "product",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/U5012RG_04064_b1_s1_a1_1_m54_2000x2000_25762b68-d933-42b9-bbef-5955164b838a.jpg",
+              "title": "ACCOLADE STRAIGHT LEG SWEATPANT",
+              "color": "Espresso",
+              "price": "$118",
+              "shipping": "Free Shipping + Free Returns",
+              "btn_text": "Get Alo",
+              "btn_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "product_jkY7nP",
+          "product_yaXp37"
+        ],
+        "settings": {
+          "title": "Wellness Made Easy"
+        }
+      },
+      "alo_header_nrAA37": {
+        "type": "alo-header",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/472241699419063450-6e2c926f-601b-4486-92da-a2524760c380.png",
+          "imglink": "",
+          "img_width": 100,
+          "img_alignment": "0px auto 0px"
+        }
+      }
+    },
+    "order": [
+      "main",
+      "zegsu-header-bar",
+      "alo_header_hJpDHc",
+      "alo_video_section_AdT3yH",
+      "alo_text_JJw4DB",
+      "alo_rich_text_8rVG9m",
+      "alo_image_U6rApH",
+      "alo_rich_text_bAA7eH",
+      "alo_image_box_8zYPhU",
+      "alo_video_section_GEyUPi",
+      "alo_lite_image_box_yK8TFh",
+      "alo_single_review_beapCj",
+      "alo_bg_text_image_fyFzWk",
+      "alo_single_review_zjWWXw",
+      "alo_bg_rich_text_image_jRMxjU",
+      "alo_image_box_6_col_QKaDhc",
+      "alo_product_section_wNQQRj",
+      "alo_header_nrAA37"
+    ]
+  }
+  
